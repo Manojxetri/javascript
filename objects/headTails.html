@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- window makes the variable gloabal -->
+    <h3>click the button to find out heads or tails</h3>
+    <button
+      onclick="const randomNumber=Math.random();
+      playGame(randomNumber);
+   "
+    >
+      click here
+    </button>
+    <h4>guess whether it is heads or tails</h4>
+    <button
+      onclick="guessCoin('heads');"
+    >
+      heads
+    </button>
+    <button
+      onclick="guessCoin('tails');
+    "
+    >
+      tails
+    </button>
+    <script>
+      const score = JSON.parse(localStorage.getItem('score')) ||{
+        wins:0,
+        looses:0
+      };
+      function playGame(guess) {
+        console.log(guess < 0.15? 'heads' : 'tails');
+      }
+      function guessCoin(coin) {
+        alert(window.result === coin ? 'You win!' : 'You lose!');
+        if(coin === window.result){
+          score.wins++;
+        }
+        else{
+          score.looses++
+        }
+        console.log(score);
+        localStorage.setItem('score',JSON.stringify(score));//stroing the value to local storage
+
+      }
+    </script>
+  </body>
+</html>

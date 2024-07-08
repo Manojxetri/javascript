@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- window makes the variable gloabal -->
+    <h3>click the button to find out heads or tails</h3>
+    <button
+      onclick="randomNumber=Math.random();
+      
+    if(randomNumber<0.15){
+        window.result='heads'
+    }
+    else{
+       window.result='tails';
+    }
+    console.log(result);"
+    >
+      click here
+    </button>
+    <h4>guess whether it is heads or tails</h4>
+    <button onclick="let guess='heads';
+    if(window.result === guess){
+        alert('you win!');
+    }
+    else{
+        alert('you loose!');
+    }">heads</button>
+    <button onclick="guess='tails';
+    if(window.result==guess){
+        alert('you win');
+    }
+    else{
+        alert('you loose!')
+    }">tails</button>
+  </body>
+</html>

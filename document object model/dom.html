@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <script src="dom.js"></script> -->
+  </head>
+  <body>
+    <button>hello</button>
+    <button class="second">second</button>
+    <script>
+      // document.body.innerHTML='hello';//this means accesing the innerhtml of body of documnent object
+      // document.title ='good job';//changes the title of the web page
+      // console.log(document.title);
+      // document.title ='changed';
+      // console.log(document.body);
+
+      // console.log(typeof document.body);
+
+      // console.log(document.body.innerHTML);
+
+      // document.body.innerHTML='<button>hey</button>';
+
+      // methods:
+      console.log(document.querySelector("button")); //access the button element
+      document.querySelector("button").innerHTML = "changed"; //changes the button value to chnaged
+
+      console.log(document.querySelector('.second'));//looking for a class with second so we use '.'
+      
+
+    </script>
+  </body>
+</html>
